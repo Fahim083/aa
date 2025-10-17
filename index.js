@@ -20,7 +20,7 @@ async function run() {
     await client.connect();
     console.log("MongoDB connected");
 
-    const Tournament = client.db("Tournament").collection("players");
+    const playerCollection = client.db("Tournament").collection("players");
 
     // Root route
     app.get("/", (req, res) => {
